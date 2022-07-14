@@ -1,0 +1,133 @@
+:root{
+    --font: 'Abel', sans-serif;
+    --black: #000814;
+    --gray: #495057;
+    --answer: #41ead4;
+    --eight: #fdfffc;
+    --background: #efe9ae;
+    --box-shadow: 0 0 1em gold;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    text-align: center;
+}
+
+h1 { 
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+    
+#content { 
+ width: 600px; 
+ margin: 0 auto;
+ padding: 2rem;
+ margin-top: 3.5rem;
+ background-color: var(--background);
+}
+
+#question {
+    margin: 1rem;
+    padding: .5rem;
+    width: 450px;
+    font-size: 1.5rem;
+    border: none;
+    background-color: var(--eight);
+  }
+  
+  #info {
+    font-size: 1.5rem;
+  }
+
+.eight-ball {
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 1.75rem;
+  margin-top: 1.75rem;
+  box-shadow: 0 0 1em gold;
+}
+
+
+div.respostas{
+  background-color: var(--gray);
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  margin: 25% auto;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: var(--answer);
+  justify-content: center;
+  word-break: word;
+  align-content: center;
+  /* animation-name: rotate;
+  animation-duration: 5s; */
+}
+
+
+/* @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+
+#eight {
+  font-size: 4rem;
+  color: var(--eight);
+  background-color: transparent;
+}
+
+footer{
+    width: 600px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+footer ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+i{
+    color: var(--gray)
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+*{
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  padding: auto;
+  text-align: center;
+  background: var(--background);
+}
+
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
