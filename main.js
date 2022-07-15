@@ -1,4 +1,6 @@
+//generate the fortune for the ball
 let answers = [
+	//array of fortunes
 	'It is certain',
 	'It is decidedly so',
 	'Without a doubt',
@@ -33,9 +35,33 @@ window.onload = function() {
 		if (question.value.length < 1) {
 			alert('You must ask something!!');
 		} else {
-			eight.innerText = '';
-			let num = Math.floor(Math.random() * Math.floor(answers.length));
-			answer.innerText = answers[num];
+			//get a random fortune message message
+			shake();
+
+			//call the fortune function to get your fortune only after 2sec
+			setTimeout(function() {
+				eight.innerText = '';
+				let num = Math.floor(Math.random() * Math.floor(answers.length));
+				answer.innerText = answers[num];
+			}, 2000);
 		}
 	});
 };
+
+function shake() {
+	let eightBall = document.getElementById('eight-ball');
+	let messageText = document.getElementById('eight');
+
+	//remove previous message if it exists
+	if (messageText != null) {
+		messageText.parentNode.removeChild(messageText);
+	}
+
+	//Make the ball shake by adding the css class
+	eightBall.classList.add('shake');
+
+	//Remove the shake class after it stops shaking
+	setTimeout(function() {
+		eightBall.classList.remove('shake');
+	}, 2000);
+}

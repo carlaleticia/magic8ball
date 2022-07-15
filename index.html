@@ -8,23 +8,33 @@
     <link rel="shortcut icon" href="/assets/images/magic8ball-icon.png" type="magic8ball-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles.css">
     <title>Magic Eight Ball</title>
 </head>
 <body>
-    <main id="content">
+    <main>
+      <div class="banner">
+        <video autoplay muted loop>
+          <source src="/assets/images/galaxy.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div  id="content">
         <h1>Magic Eight Ball</h1>
         <input type="text" id="question" placeholder="Ask me what you wanna know and click 8"/>
         <div id="eight-ball" class="eight-ball">
-          <div class="respostas" id="rotate">
-            <p id="eight">8</p>
+          <div class="fortune" id="rotate">
+            <button id="eight" onClick="shake()">8</button>
             <p id="answer"></p>
           </div>
         </div>
+      </div>
       </main>
       <script src="/main.js"></script>
+      <!-- JavaScript Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 <footer align="center">
     <p>Carla Almeida</p>

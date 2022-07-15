@@ -1,12 +1,14 @@
 :root{
-    --font: 'Abel', sans-serif;
+    --font: 'Quicksand', sans-serif;
     --black: #000814;
     --gray: #495057;
-    --answer: #41ead4;
-    --eight: #fdfffc;
-    --background: #efe9ae;
-    --box-shadow: 0 0 1em gold;
-
+    --blue: #0a2472;
+    --answer: #00afb9;
+    --white: #fdfffc;
+    --yellow: #ffd166;
+    --lilas: #ca7df9;
+    --background: rgba(72, 53, 90, 0.39);
+    --box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.123);
 }
 
 *{
@@ -20,23 +22,43 @@
 h1 { 
     font-weight: bold;
     font-size: 2.5rem;
+    background-color: var(--yellow);
+    background: linear-gradient(90deg,var(--blue),var(--lilas));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-    
+
+.banner video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: fit-content;
+  z-index: -10000;
+}
+
 #content { 
  width: 600px; 
  margin: 0 auto;
  padding: 2rem;
- margin-top: 3.5rem;
- background-color: var(--background);
+ margin-top: 3rem;
+ background: var(--background);
+ box-shadow: var(--box-shadow);
+ backdrop-filter: blur(7px);
+ -webkit-backdrop-filter: blur(7px);
+ z-index: 2;
 }
 
 #question {
     margin: 1rem;
     padding: .5rem;
     width: 450px;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border: none;
-    background-color: var(--eight);
+    background-color: var(--white);
   }
   
   #info {
@@ -47,45 +69,38 @@ h1 {
   background-color: var(--black);
   border: 1px solid var(--black);
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   margin: 0 auto;
-  margin-bottom: 1.75rem;
-  margin-top: 1.75rem;
-  box-shadow: 0 0 1em gold;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: var(--box-shadow);
 }
 
+#answer{
+  background-color: transparent;
+}
 
-div.respostas{
-  background-color: var(--gray);
+div.fortune{
+  background-color: var(--white);
   border-radius: 50%;
   width: 50%;
   height: 50%;
   margin: 25% auto;
-  padding: 2rem;
+  padding: 2.5rem;
   font-size: 1.5rem;
   color: var(--answer);
   justify-content: center;
   word-break: word;
   align-content: center;
-  /* animation-name: rotate;
-  animation-duration: 5s; */
 }
 
-
-/* @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  } */
-
 #eight {
-  font-size: 4rem;
-  color: var(--eight);
+  font-size: 4.2rem;
+  font-weight: bolder;
+  color: var(--black);
   background-color: transparent;
+  border: none;
 }
 
 footer{
@@ -93,10 +108,10 @@ footer{
     display: flex;
     text-align: center;
     justify-content: space-evenly;
-    color: var(--gray);
+    color: var(--white);
     font-size: 0.9rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 footer ul li {
@@ -107,27 +122,135 @@ footer ul li {
 }
 
 i{
-    color: var(--gray)
+    color: var(--white)
 }
+
+
+/* Animation added with JavaScript */
+.shake{
+  animation: shake 1s;
+}
+
+  @keyframes shake {
+    0% { transform: translate(4px, 4px) rotate(0deg); }
+    10% { transform: translate(-4px, -4px) rotate(-1deg); }
+    20% { transform: translate(-7px, 0px) rotate(1deg); }
+    30% { transform: translate(7px, 4px) rotate(0deg); }
+    40% { transform: translate(4px, -4px) rotate(1deg); }
+    50% { transform: translate(-4px, 4px) rotate(-1deg); }
+    60% { transform: translate(-7px, 4px) rotate(0deg); }
+    70% { transform: translate(7px, 4px) rotate(-1deg); }
+    80% { transform: translate(-4px, -4px) rotate(1deg); }
+    90% { transform: translate(4px, 4px) rotate(0deg); }
+    100% { transform: translate(4px, -4px) rotate(-1deg); }
+  }
+
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-*{
-  width: fit-content;
-  height: fit-content;
-  margin: auto;
-  padding: auto;
-  text-align: center;
-  background: var(--background);
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
 }
+
+.banner video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  z-index: -10000;
+}
+
+#content { 
+ width: 450px; 
+ margin: 0 auto;
+ padding: 1rem;
+ margin-top: 2rem;
+ background: var(--background);
+ box-shadow: var(--box-shadow);
+ backdrop-filter: blur(7px);
+ -webkit-backdrop-filter: blur(7px);
+ z-index: 2;
+}
+
+#question {
+    margin: 1rem;
+    padding: .5rem;
+    width: 380px;
+    font-size: 1rem;
+    border: none;
+    background-color: var(--white);
+  }
+  
+  #info {
+    font-size: 1.2rem;
+  }
+
+.eight-ball {
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+#answer{
+  background-color: transparent;
+}
+
+div.fortune{
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 20% auto;
+  padding: 3rem;
+  font-size: 1.5rem;
+  color: var(--answer);
+  justify-content: center;
+  word-break: word;
+  align-content: center;
+}
+
+#eight {
+  font-size: 5rem;
+  color: var(--black);
+  background-color: transparent;
+  border: none;
+}
+
+footer{
+    width: 450px;
+    text-align: center;
+    justify-content: space-evenly;
+    color: var(--white);
+    font-size: 0.9rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+footer ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+i{
+    color: var(--white)
+}
+
 
 
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {...}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {...}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 600px) {
+
+}
